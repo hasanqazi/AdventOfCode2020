@@ -5,6 +5,7 @@ with open("input") as f:
     input.append(i)
 
 def check_pass():
+  valid_pass = 0
   check = 0
   for i in range(len(input)):
     first_limit = input[i].split('-')[0]
@@ -19,9 +20,10 @@ def check_pass():
       print("Valid password")
       #print(first_limit, second_limit, check)
       check = 0
+      valid_pass += 1
     else:
       print("Invalid password")
       #print(first_limit, second_limit, check)
       check = 0
-
+  print(valid_pass)
 check_pass()
